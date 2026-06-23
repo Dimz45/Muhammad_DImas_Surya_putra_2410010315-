@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Aetheria: Echoes of the Void</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        @page {
+            size: A4;
+            margin: 15mm 12mm;
+            background-color: #0b0f19; /* Dark space/void theme */
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #e2e8f0;
+            background-color: #0b0f19;
+            line-height: 1.6;
+            font-size: 11pt;
+        }
+        
+        /* Header Banner with negative margins to look full bleed */
+        .header-banner {
+            margin: -15mm -12mm 25px -12mm;
+            padding: 40px 20mm;
+            background: linear-gradient(135deg, #1e1b4b 0%, #311042 100%);
+            border-bottom: 3px solid #8b5cf6;
+            text-align: center;
+        }
+        .game-title {
+            font-size: 26pt;
+            margin: 0 0 10px 0;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(139, 92, 246, 0.6);
+        }
+        .game-subtitle {
+            font-size: 13pt;
+            margin: 0;
+            color: #a78bfa;
+            letter-spacing: 1px;
+            font-style: italic;
+        }
+        
+        /* Main Layout using tables for WeasyPrint compatibility */
+        .main-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .main-table td {
+            vertical-align: top;
+            padding: 10px;
+        }
+        .sidebar {
+            width: 30%;
+            background-color: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 6px;
+            padding: 15px;
+        }
+        .content {
+            width: 70%;
+            padding-left: 20px;
+        }
+        
+        h2 {
+            font-size: 15pt;
+            color: #f3f4f6;
+            margin-top: 0;
+            margin-bottom: 12px;
+            border-left: 4px solid #8b5cf6;
+            padding-left: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        p {
+            margin: 0 0 15px 0;
+            color: #9ca3af;
+            text-align: justify;
+        }
+        
+        /* Sidebar styling */
+        .info-box {
+            margin-bottom: 20px;
+        }
+        .info-title {
+            font-size: 11pt;
+            font-weight: bold;
+            color: #a78bfa;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        .info-item {
+            font-size: 10pt;
+            margin-bottom: 6px;
+            color: #d1d5db;
+            border-bottom: 1px solid #1f2937;
+            padding-bottom: 4px;
+        }
+        .info-item span {
+            color: #9ca3af;
+        }
+        
+        /* Features list */
+        .feature-item {
+            background-color: #131525;
+            border: 1px solid #232245;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+        .feature-item strong {
+            color: #f3f4f6;
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        /* Requirements table */
+        .req-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 10pt;
+        }
+        .req-table th {
+            background-color: #1e1b4b;
+            color: #a78bfa;
+            text-align: left;
+            padding: 6px 10px;
+            font-weight: bold;
+            border: 1px solid #2d2a6e;
+        }
+        .req-table td {
+            padding: 6px 10px;
+            border: 1px solid #1f2937;
+            color: #d1d5db;
+        }
+        .req-table tr:nth-child(even) td {
+            background-color: #111322;
+        }
+        
+        /* Footer */
+        .footer {
+            margin-top: 30px;
+            border-top: 1px solid #1f2937;
+            padding-top: 15px;
+            text-align: center;
+            font-size: 9pt;
+            color: #6b7280;
+        }
+        
+        /* Page break prevention */
+        .feature-item, .req-table, .info-box {
+            page-break-inside: avoid;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-banner">
+        <div class="game-title">Aetheria</div>
+        <div class="game-subtitle">Echoes of the Void</div>
+    </div>
+
+    <table class="main-table">
+        <tr>
+            <!-- Sidebar Info -->
+            <td class="sidebar">
+                <div class="info-box">
+                    <div class="info-title">Detail Game</div>
+                    <div class="info-item"><strong>Genre:</strong> Action RPG, Sci-Fi</div>
+                    <div class="info-item"><strong>Developer:</strong> Nebula Studio</div>
+                    <div class="info-item"><strong>Rilis:</strong> Oktober 2026</div>
+                    <div class="info-item"><strong>Platform:</strong> PC, PS5, Xbox Series X</div>
+                    <div class="info-item"><strong>Rating:</strong> Remaja (13+)</div>
+                </div>
+                
+                <div class="info-box">
+                    <div class="info-title">Skor Review</div>
+                    <div class="info-item" style="border: none;">
+                        <span style="font-size: 20pt; color: #f59e0b; font-weight: bold;">9.2 / 10</span><br>
+                        <span style="font-size: 9pt; italic;">- Metacritic Global</span>
+                    </div>
+                </div>
+            </td>
+            
+            <!-- Main Content -->
+            <td class="content">
+                <h2>Sinopsis</h2>
+                <p>
+                    <strong>Aetheria: Echoes of the Void</strong> membawa Anda ke dalam petualangan kosmis epik di galaksi yang hampir runtuh. Pemain berperan sebagai seorang *Voidwalker*, kesatria terakhir yang mampu memanipulasi energi Aether untuk melawan ancaman kegelapan yang menelan seluruh tata surya.
+                </p>
+                
+                <h2>Fitur Utama Game</h2>
+                
+                <div class="feature-item">
+                    <strong>Eksplorasi Dunia Terbuka (Open World)</strong>
+                    Jelajahi 5 planet unik dengan ekosistem, rahasia purba, dan ancaman alien yang berbeda di setiap sudutnya.
+                </div>
+                
+                <div class="feature-item">
+                    <strong>Sistem Kombat Dinamis</strong>
+                    Gabungkan serangan fisik dengan sihir elemen Aether untuk menciptakan kombo mematikan yang tak terbendung.
+                </div>
+                
+                <div class="feature-item">
+                    <strong>Kustomisasi Tanpa Batas</strong>
+                    Rakit senjata, armor, dan pilih pohon kemampuan (skill tree) yang sesuai dengan gaya bermain Anda sendiri.
+                </div>
+                
+                <h2>Spesifikasi Sistem (PC)</h2>
+                <table class="req-table">
+                    <tr>
+                        <th>Komponen</th>
+                        <th>Spesifikasi Minimum</th>
+                        <th>Spesifikasi Rekomendasi</th>
+                    </tr>
+                    <tr>
+                        <td>OS</td>
+                        <td>Windows 10 (64-bit)</td>
+                        <td>Windows 11 (64-bit)</td>
+                    </tr>
+                    <tr>
+                        <td>Prosesor</td>
+                        <td>Intel Core i5-8400 / AMD Ryzen 5 2600</td>
+                        <td>Intel Core i7-10700K / AMD Ryzen 7 5800X</td>
+                    </tr>
+                    <tr>
+                        <td>Memori</td>
+                        <td>8 GB RAM</td>
+                        <td>16 GB RAM</td>
+                    </tr>
+                    <tr>
+                        <td>Grafis</td>
+                        <td>NVIDIA GTX 1060 / RX 580</td>
+                        <td>NVIDIA RTX 3070 / RX 6700 XT</td>
+                    </tr>
+                    <tr>
+                        <td>Penyimpanan</td>
+                        <td>50 GB SSD</td>
+                        <td>50 GB NVMe SSD</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <div class="footer">
+        &copy; 2026 Nebula Studio Games. Hak Cipta Dilindungi Undang-Undang.
+    </div>
+
+</body>
+</html>
